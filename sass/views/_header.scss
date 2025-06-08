@@ -1,12 +1,46 @@
+.logo {
+    position: fixed;
+    top: 30px;
+    left: 80px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.logo.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.logo img {
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
 
 
+// menu burger;
 
-/* burger */
 #menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
+    position: fixed;
+    top: 30px;
+    right: 80px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+}
+
+#menu.hidden {
+    display: none;
+}
+
+#menu.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 #menu-bar {
@@ -19,7 +53,7 @@
 .bar {
   height: 5px;
   width: 100%;
-  background-color: #DC052D;
+  background-color: $primaryColor;
   display: block;
   border-radius: 5px;
   transition: 0.3s ease;
@@ -38,9 +72,7 @@
   position: absolute;
   top: 80px;
   right: 20px;
-  background-color: #DC052D;
   padding: 20px;
-  border-radius: 10px;
   transition: 0.3s ease;
 }
 
@@ -52,6 +84,7 @@
 
 .nav li {
   padding: 12px 0;
+  width: 90px;
 }
 
 .nav li a {
@@ -65,14 +98,14 @@
 }
 
 .menu-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 30px;
+  right: 80px;
   z-index: 1;
   width: 0;
   height: 0;
   margin: 30px 20px 20px 0;
-  background: radial-gradient(circle, #DC052D, #DC052D);
+  background: $primaryColor;
   border-radius: 50%;
   transition: 0.3s ease;
 }
@@ -102,4 +135,29 @@
   width: 520px;
   height: 460px;
   transform: translate(60%, -30%);
+}
+
+
+// Thème clair : fond sombre → contenu clair
+.theme-light {
+  .bar {
+    background-color: white !important;
+  }
+
+  .logo img {
+    filter: brightness(100);
+    opacity: 1;
+  }
+}
+
+// Thème sombre : fond clair → contenu sombre
+.theme-dark {
+  .bar {
+    background-color: black !important;
+  }
+
+  .logo img {
+    filter: brightness(0);
+    opacity: 1;
+  }
 }

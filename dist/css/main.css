@@ -1,24 +1,32 @@
 @charset "UTF-8";
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
-  background-color: #FFF4E3;
+  background-color: #111827;
 }
 
 p {
-  font-family: "Jaldi", serif;
+  font-family: "Open Sans", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
 }
 
+a {
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
 .mention {
-  font-family: "Jaldi", serif;
+  font-family: "Open Sans", serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -76,12 +84,46 @@ h1 {
     display: block;
   }
 }
-/* burger */
-#menu {
-  position: absolute;
-  top: 0;
-  right: 0;
+.logo {
+  position: fixed;
+  top: 30px;
+  left: 80px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
   z-index: 2;
+}
+
+.logo.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.logo img {
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+#menu {
+  position: fixed;
+  top: 30px;
+  right: 80px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+#menu.hidden {
+  display: none;
+}
+
+#menu.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 #menu-bar {
@@ -94,7 +136,7 @@ h1 {
 .bar {
   height: 5px;
   width: 100%;
-  background-color: #DC052D;
+  background-color: #3B82F6;
   display: block;
   border-radius: 5px;
   transition: 0.3s ease;
@@ -113,9 +155,7 @@ h1 {
   position: absolute;
   top: 80px;
   right: 20px;
-  background-color: #DC052D;
   padding: 20px;
-  border-radius: 10px;
   transition: 0.3s ease;
 }
 
@@ -127,6 +167,7 @@ h1 {
 
 .nav li {
   padding: 12px 0;
+  width: 90px;
 }
 
 .nav li a {
@@ -140,14 +181,14 @@ h1 {
 }
 
 .menu-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 30px;
+  right: 80px;
   z-index: 1;
   width: 0;
   height: 0;
   margin: 30px 20px 20px 0;
-  background: radial-gradient(circle, #DC052D, #DC052D);
+  background: #3B82F6;
   border-radius: 50%;
   transition: 0.3s ease;
 }
@@ -177,4 +218,33 @@ h1 {
   width: 520px;
   height: 460px;
   transform: translate(60%, -30%);
+}
+
+.theme-light .bar {
+  background-color: white !important;
+}
+.theme-light .logo img {
+  filter: brightness(100);
+  opacity: 1;
+}
+
+.theme-dark .bar {
+  background-color: black !important;
+}
+.theme-dark .logo img {
+  filter: brightness(0);
+  opacity: 1;
+}
+
+.video {
+  height: 1024px;
+}
+
+.about {
+  height: 1024px;
+  background-color: #fff;
+}
+
+.service {
+  height: 1024px;
 }
