@@ -1,0 +1,56 @@
+html {
+    // box-sizing: border-box; 
+    font-size: 62.5%;
+    
+}
+  
+body{
+  font-size: 1.6rem;
+  font-family: "rooney-sans", sans-serif;
+  margin: 0;
+  background-color: #FFF4E3;
+}
+
+p {
+  font-family: "Jaldi", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 430px) {
+
+}
