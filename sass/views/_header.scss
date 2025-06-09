@@ -20,6 +20,10 @@
 }
 
 
+#logo-img {
+    transition: filter 0.5s ease;
+}
+
 // menu burger;
 
 #menu {
@@ -138,26 +142,4 @@
 }
 
 
-// Thème clair : fond sombre → contenu clair
-.theme-light {
-  .bar {
-    background-color: white !important;
-  }
 
-  .logo img {
-    filter: brightness(100);
-    opacity: 1;
-  }
-}
-
-// Thème sombre : fond clair → contenu sombre
-.theme-dark {
-  .bar {
-    background-color: black !important;
-  }
-
-  .logo img {
-    filter: brightness(0);
-    opacity: 1;
-  }
-}
