@@ -20,9 +20,8 @@ p {
 
 a {
   font-family: "Open Sans", serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .mention {
@@ -232,7 +231,7 @@ h1 {
   top: 90px;
   z-index: -1;
   background-color: #fff;
-  padding: 400px 0 0 0;
+  padding: 150px 0 0 0;
 }
 .about__container__contour {
   font-family: "Nunito", sans-serif;
@@ -251,7 +250,30 @@ h1 {
   padding-top: 100px;
 }
 .about__pose__txt {
-  width: 543px;
+  width: 540px;
+}
+.about__pose__txt__p {
+  padding-bottom: 40px;
+}
+.about__pose__txt h2 {
+  padding-bottom: 30px;
+  color: #111827;
+}
+.about__pose__txt a {
+  padding: 20px 35px;
+  color: white;
+  background: #111827;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.about__pose__txt a:hover {
+  transform: scale(1.08);
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(79, 172, 254, 0.4);
+  background: #3B82F6;
 }
 
 .service {

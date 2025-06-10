@@ -10,7 +10,7 @@
         top: 90px;
         z-index: -1;
         background-color: $white;
-            padding: 400px 0 0 0;
+        padding: 150px 0 0 0;
 
         &__contour{
             font-family: "Nunito", sans-serif;
@@ -30,9 +30,36 @@
         background-color: $white;
         gap:54px;
         padding-top:100px;
-        &__txt{
-            width: 543px;
 
+        &__txt{
+            width: 540px;
+
+            &__p{
+                padding-bottom: 40px;
+            }
+        }
+
+        &__txt h2{
+            padding-bottom:30px;
+            color: $tertiaryColor; 
+        }
+
+        &__txt a{
+            padding:20px 35px;
+            color: white;
+            background: $tertiaryColor;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        &__txt a:hover{
+            transform: scale(1.08);
+            border-radius:10px;
+            box-shadow: 0 12px 24px rgba(79, 172, 254, 0.4);
+            background: $primaryColor;
         }
     }
 }
