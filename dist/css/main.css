@@ -223,6 +223,50 @@ h1 {
   transform: translate(60%, -30%);
 }
 
+.footer {
+  padding: 100px 0;
+}
+.footer__info {
+  display: flex;
+  color: #fff;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.footer__info__nav__mail {
+  text-align: center;
+}
+.footer__info__nav__mail p {
+  line-height: 0px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.footer__info__nav ul {
+  list-style: none;
+  padding: 0px;
+}
+.footer__info__nav li {
+  padding: 10px;
+}
+.footer__info__nav li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer__pose {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+.footer__pose p {
+  color: #5D5D5A;
+}
+
+.video {
+  height: 1024px;
+}
+
 .about__container {
   display: flex;
   justify-content: center;
@@ -247,7 +291,7 @@ h1 {
   justify-content: center;
   background-color: #fff;
   gap: 54px;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 .about__pose__txt {
   width: 540px;
@@ -255,12 +299,21 @@ h1 {
 .about__pose__txt__p {
   padding-bottom: 40px;
 }
+.about__pose__txt__btn {
+  text-align: center;
+}
+.about__pose__txt__btn p {
+  font-style: italic;
+  font-size: 14px;
+  color: #5D5D5A;
+  line-height: 0px;
+}
 .about__pose__txt h2 {
   padding-bottom: 30px;
   color: #111827;
 }
 .about__pose__txt a {
-  padding: 20px 35px;
+  padding: 10px 25px;
   color: white;
   background: #111827;
   border: none;
@@ -270,10 +323,37 @@ h1 {
   transition: all 0.3s ease;
 }
 .about__pose__txt a:hover {
-  transform: scale(1.08);
-  border-radius: 10px;
-  box-shadow: 0 12px 24px rgba(79, 172, 254, 0.4);
+  padding: 20px 35px;
+  border-radius: 50px;
+  box-shadow: 0 12px 24px #3B82F6;
   background: #3B82F6;
+}
+.about__pose__txt img {
+  width: 550px;
+  height: 430px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.jour {
+  background-color: #3B82F6; /* Bleu jour */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nuit {
+  background-color: #8B5CF6; /* Violet nuit */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .service {
@@ -322,4 +402,79 @@ h1 {
 }
 .service__types__txt p {
   color: #fff;
+}
+
+.thanks {
+  padding: 150px 0;
+}
+.thanks__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 97px;
+  z-index: -1;
+}
+.thanks__container__contour {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 280px;
+  color: transparent;
+  -webkit-text-stroke: 2px #F9FAFB;
+  opacity: 0.7;
+  line-height: 1;
+}
+.thanks__h2 {
+  width: 1062px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background-color: #111827;
+  padding-top: 60px;
+}
+
+.contact {
+  text-align: center;
+  background-color: #fff;
+  padding: 150px 0;
+}
+.contact__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.contact__btn__cont {
+  padding: 10px 25px;
+  color: white;
+  background: #111827;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact__btn__cont:hover {
+  padding: 10px 35px;
+  border-radius: 50px;
+  box-shadow: 0 12px 24px #3B82F6;
+  background: #3B82F6;
+}
+.contact__btn__about {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+}
+.contact__btn__about:hover {
+  padding: 10px 35px;
+  color: white;
+  background: #8B5CF6;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 12px 24px #8B5CF6;
+  background: #8B5CF6;
 }

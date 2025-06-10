@@ -71,13 +71,57 @@
                 <a href="#">Me contacter</a>
             </div>
             <div class="about__pose__txt">
-                <img src="dist/images/animation perso Jour.png">
-                <button></button>
-                <p>Clique ici</p>
+                <img id="image" src="dist/images/animation perso Jour.png" alt="Image affichée">
+                <div class="about__pose__txt__btn">
+                    <button id="toggleBtn" class="jour" onclick="changerImage()"></button>
+                    <p>Clique ici</p>
+                </div>
             </div>
         </div>
     </section>
-    <footer>
+    <section class="thanks">
+        <div class="thanks__container">
+            <div class="thanks__container__contour">Merci</div>
+        </div>
+        <h2 class="thanks__h2">Les retours de ceux qui m'ont fait confiance (section en cours de développement).</h2>
+    </section>
+    <section class="contact">
+        <h1>Parlons-en !</h2>
+        <p>Je vous accompagne de l’idée à la réalisation pour créer des projets web, vidéo et graphiques qui vous ressemblent.</p>
+        <div class="contact__btn">
+            <a href="footer" class="contact__btn__cont">Me contacter</a>
+            <a href="about" class="contact__btn__about">À propos</a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__info">
+            <div class="footer__info__nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contacte</a></li>
+                </ul>
+            </div>
+            <div class="footer__info__nav">
+                <ul class="footer__info__nav__mail">
+                    <li><p>c.reate.potteau@gmail.com</p></li>
+                    <li><p>07 81 60 00 69</p></li>
+                </ul>
+            </div>
+            <div class="footer__info__nav">
+                <ul>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__pose">
+            <p>© 2025 C-reate - All rights reserved.</p>
+            <a href="header"><img src="dist/images/fleche_home.png"></a>
+            <p>Webdesign • Montage vidéo • Graphisme</p>
+        </div>
+
     </footer>
     <script src="dist/scripts/main.js"></script>
   </body>

@@ -29,13 +29,26 @@
         justify-content: center;
         background-color: $white;
         gap:54px;
-        padding-top:100px;
+        padding:100px 0;
 
         &__txt{
             width: 540px;
+            
 
             &__p{
                 padding-bottom: 40px;
+            }
+
+            
+            &__btn {
+                text-align: center;
+            }
+
+            &__btn p {
+                font-style: italic;
+                font-size:14px;
+                color: $quinary;
+                line-height: 0px;
             }
         }
 
@@ -45,7 +58,7 @@
         }
 
         &__txt a{
-            padding:20px 35px;
+            padding:10px 25px;
             color: white;
             background: $tertiaryColor;
             border: none;
@@ -56,10 +69,39 @@
         }
 
         &__txt a:hover{
-            transform: scale(1.08);
-            border-radius:10px;
-            box-shadow: 0 12px 24px rgba(79, 172, 254, 0.4);
+            padding: 20px 35px;
+            border-radius:50px;
+            box-shadow: 0 12px 24px $primaryColor;
             background: $primaryColor;
         }
+
+
+        &__txt img {
+            width: 550px;
+            height: 430px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: opacity 0.3s ease;
+        }
     }
+}
+
+.jour {
+    background-color: $primaryColor; /* Bleu jour */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+.nuit {
+    background-color: $secondaryColor; /* Violet nuit */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

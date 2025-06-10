@@ -1,0 +1,51 @@
+.footer{
+    padding: 100px 0;
+
+    &__info{
+        display: flex;
+        color: $white;
+        justify-content: space-evenly;
+        align-items: baseline;
+
+        &__nav{
+
+            &__mail{
+                text-align: center;
+            }
+
+            &__mail p{
+                line-height: 0px;
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+
+        &__nav ul {
+            list-style: none;
+            padding: 0px;
+        }
+
+        &__nav li {
+            padding: 10px;
+        }
+
+        &__nav li a {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    &__pose{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top:50px ;
+
+    }
+
+    &__pose p{
+        color: $quinary;
+    }
+}

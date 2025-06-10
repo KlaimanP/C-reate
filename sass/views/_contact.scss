@@ -1,0 +1,52 @@
+.contact{
+    text-align: center;
+    background-color:$white;
+    padding: 150px 0;
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        
+
+        &__cont{
+            padding:10px 25px;
+            color: white;
+            background: $tertiaryColor;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        &__cont:hover{
+            padding: 10px 35px;
+            border-radius:50px;
+            box-shadow: 0 12px 24px $primaryColor;
+            background: $primaryColor;
+        }
+
+        &__about{
+            cursor: pointer;
+            text-decoration: none;
+            color: $black;
+            padding:10px 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+        }
+
+        &__about:hover{
+            padding: 10px 35px;
+            color: white;
+            background: $secondaryColor;
+            border: none;
+            
+            text-decoration: none;
+            box-shadow: 0 12px 24px $secondaryColor;
+            background: $secondaryColor;
+        }
+    }
+}

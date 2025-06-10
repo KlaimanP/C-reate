@@ -38,13 +38,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+///////////////////////////////////// Change image à propos //////////////////////
 
+const imageElement = document.getElementById("image");
+    const buttonElement = document.getElementById("toggleBtn");
 
+    const images = [
+      {
+        src: "dist/images/animation perso Jour.png",
+        classe: "jour"
+      },
+      {
+        src: "dist/images/animation perso Nuit.png",
+        classe: "nuit"
+      }
+    ];
 
+    let index = 0;
 
+    function changerImage() {
+      // Diminuer l'opacité
+      imageElement.style.opacity = 0;
 
+      // Attendre la fin du fondu avant de changer l'image
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        imageElement.src = images[index].src;
 
+        // Mise à jour classe du bouton
+        buttonElement.classList.remove("jour", "nuit");
+        buttonElement.classList.add(images[index].classe);
 
-/////////////////////////////////////
+        // Ramener l'opacité
+        imageElement.style.opacity = 1;
+      }, 300); // délai légèrement inférieur à transition pour effet fluide
+    }
 
 
