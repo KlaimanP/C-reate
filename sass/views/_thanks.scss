@@ -29,3 +29,49 @@
        padding-top:60px ;
     }
 }
+
+// Tablette (max-width: 1024px)
+@media screen and (max-width: 1024px) {
+  .thanks {
+    padding: 100px 20px;
+
+    &__container {
+      top: 60px;
+
+      &__contour {
+        font-size: 160px;
+        -webkit-text-stroke: 1.5px $quaternaryColor;
+        opacity: 0.5;
+      }
+    }
+
+    &__h2 {
+      width: 90%;
+      padding: 40px 20px 30px;
+      font-size: 2.6rem;
+    }
+  }
+}
+
+// Mobile (max-width: 430px)
+@media screen and (max-width: 430px) {
+  .thanks {
+    padding: 60px 10px;
+
+    &__container {
+      top: 30px;
+
+      &__contour {
+        font-size: 90px;
+        -webkit-text-stroke: 1px $quaternaryColor;
+        opacity: 0.4;
+      }
+    }
+
+    &__h2 {
+      width: 100%;
+      padding: 30px 15px 20px;
+      font-size: 1.5rem;
+    }
+  }
+}

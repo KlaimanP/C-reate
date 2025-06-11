@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>C-reate</title>
     <meta name="description" content="micro entreprise C-reate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="dist/images/lg_icone.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +13,12 @@
   </head>
   <body>
     <a name="top"></a>
-    <section class="video">
-        <!-- vidéo à mettre -->
+    <section class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="dist/video/Intro_video.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéo.
+        </video>
+        <a href="#apres-video" class="scroll-arrow"><img src="dist/images/fleche_home.png" class="rotate"></a>
     </section>
     <header>
         <div class="logo" id="logo">
@@ -37,6 +42,7 @@
         <div class="menu-bg" id="menu-bg"></div>
     </header>
     <section class="service" id="service">
+        <a id="apres-video"></a>
         <div class="service__container">
             <div class="service__container__contour">SERVICES</div>
         </div>

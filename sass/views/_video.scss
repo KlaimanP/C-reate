@@ -1,3 +1,73 @@
-.video{
-    height:1024px;
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.scroll-arrow {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: $primaryColor;
+      animation: bounce 1.5s infinite;
+      text-decoration: none;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+    transform: translate(-50%, 0);
+    }
+    50% {
+    transform: translate(-50%, 10px);
+    }
+}
+
+
+#apres-video {
+    height: 100vh;
+    background-color: #0c101c;
+    color: $white;
+    padding: 100px 20px;
+}
+
+
+// Tablette (max-width: 1024px)
+@media screen and (max-width: 1024px) {
+  .video-container {
+    height: 70vh;  // moins haut que full écran
+  }
+
+  .scroll-arrow {
+    font-size: 1.6rem;
+    bottom: 15px;
+  }
+
+  #apres-video {
+    padding: 80px 15px;
+  }
+}
+
+// Mobile (max-width: 430px)
+@media screen and (max-width: 430px) {
+  .video-container {
+    height: 60vh;
+  }
+
+  .scroll-arrow {
+    font-size: 1.2rem;
+    bottom: 10px;
+  }
+
+  #apres-video {
+    padding: 60px 10px;
+  }
 }

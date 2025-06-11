@@ -59,11 +59,52 @@ h1 {
 }
 
 
-/* Responsive */
+// Tablette (<= 1024px)
 @media screen and (max-width: 1024px) {
-
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  h4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  p, a, .mention {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
+// Mobile (<= 430px)
 @media screen and (max-width: 430px) {
-
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  p, a, .mention {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
+
+

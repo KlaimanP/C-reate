@@ -1,3 +1,52 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollArrow = document.querySelector(".scroll-arrow");
+    const apresVideo = document.getElementById("apres-video");
+
+
+    let hasScrolled = false;
+
+    // Gère le scroll automatique
+    function skipToSection() {
+        if (hasScrolled) return;
+        hasScrolled = true;
+
+        apresVideo.scrollIntoView({ behavior: "smooth" });
+
+        // Cache la flèche
+        if (scrollArrow) {
+            scrollArrow.style.opacity = "0";
+            scrollArrow.style.pointerEvents = "none";
+        }
+
+        // Supprime le listener pour ne le faire qu'une fois
+        window.removeEventListener("wheel", handleScroll);
+        window.removeEventListener("keydown", handleKey);
+    }
+
+    // Si l'utilisateur scroll avec la molette
+    function handleScroll(e) {
+        if (e.deltaY > 0) {
+            skipToSection();
+        }
+    }
+
+    // Si l'utilisateur scrolle avec les touches (flèche ou barre espace)
+    function handleKey(e) {
+        const keys = ["ArrowDown", "PageDown", " "];
+        if (keys.includes(e.key)) {
+            skipToSection();
+        }
+    }
+
+    window.addEventListener("wheel", handleScroll, { passive: true });
+    window.addEventListener("keydown", handleKey);
+});
+
+
+
+
+/////////////menu////////////////////
+
 function menuOnClick() {
   document.getElementById("menu-bar").classList.toggle("change");
   document.getElementById("nav").classList.toggle("change");

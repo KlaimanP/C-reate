@@ -1,5 +1,5 @@
 .service{
-    padding: 400px 0;
+    padding: 150px 0;
 
     &__container {
       display: flex;
@@ -53,4 +53,94 @@
             color: $white;
         }
     }
+}
+
+// Tablette (max-width: 1024px)
+@media screen and (max-width: 1024px) {
+  .service {
+    padding: 100px 20px;
+
+    &__container {
+      top: 60px;
+
+      &__contour {
+        font-size: 160px;
+        -webkit-text-stroke: 1.5px $quaternaryColor;
+        opacity: 0.5;
+      }
+    }
+
+    &__types {
+      flex-direction: column;
+      gap: 30px;
+      padding-top: 40px;
+      align-items: center;
+
+      &__txt {
+        text-align: center;
+        width: 100%;
+        border-left: none;
+        border-width : 1px;
+        border-top: solid;
+        border-color: $white;
+        max-width: 480px;
+        padding-left: 15px;
+        border-left-width: 1.5px;
+      }
+
+      &__txt h2 {
+        padding-bottom:15px;
+        font-size: 2.2rem;
+        -webkit-text-stroke: 0.3px $primaryColor;
+      }
+
+      &__txt h3 {
+        font-size: 1.6rem;
+      }
+
+      &__txt p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+// Mobile (max-width: 430px)
+@media screen and (max-width: 430px) {
+  .service {
+    padding: 60px 10px;
+
+    &__container {
+      top: 29px;
+
+      &__contour {
+        font-size: 80px;
+        -webkit-text-stroke: 1px $quaternaryColor;
+        opacity: 0.4;
+      }
+    }
+
+    &__types {
+      gap: 20px;
+      padding-top: 30px;
+
+      &__txt {
+        max-width: 300px;
+        padding-left: 10px;
+        border-left-width: 0.5px;
+      }
+
+      &__txt h2 {
+        font-size: 1.8rem;
+      }
+
+      &__txt h3 {
+        font-size: 1.4rem;
+      }
+
+      &__txt p {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
