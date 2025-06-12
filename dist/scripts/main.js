@@ -59,12 +59,23 @@ function closeMenu() {
   document.getElementById("menu-bg").classList.remove("change-bg");
 }
 
-window.addEventListener('scroll', () => {
+function getScrollThreshold() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 430) {
+    return 230;
+  } else if (screenWidth <= 1024) {
+    return 774;
+  } else {
+    return 1024;
+  }
+}
+
+function toggleMenuVisibility() {
   const menu = document.getElementById('menu');
   const logo = document.getElementById('logo');
+  const scrollThreshold = getScrollThreshold();
 
-  // Affichage du menu burger et logo selon scrollY
-  if (window.scrollY > 1024) {
+  if (window.scrollY > scrollThreshold) {
     menu.classList.add('visible');
     logo.classList.add('visible');
   } else {
@@ -72,19 +83,18 @@ window.addEventListener('scroll', () => {
     logo.classList.remove('visible');
   }
 
-  // Fermer le menu si ouvert quand on scroll
+  // Close menu if scrolling
   closeMenu();
-});
+}
 
+// On scroll
+window.addEventListener('scroll', toggleMenuVisibility);
+
+// On page load
 document.addEventListener('DOMContentLoaded', () => {
-  const menu = document.getElementById('menu');
-  const logo = document.getElementById('logo');
-
-  if (window.scrollY <= 1024) {
-    menu.classList.remove('visible');
-    logo.classList.remove('visible');
-  }
+  toggleMenuVisibility(); // call initially in case already scrolled
 });
+
 
 
 ///////////////////////////////////// Change image à propos //////////////////////

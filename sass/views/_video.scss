@@ -1,8 +1,15 @@
 .video-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: auto;
     overflow: hidden;
+
+    video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
 }
 
 
@@ -32,42 +39,53 @@
 }
 
 
-#apres-video {
-    height: 100vh;
-    background-color: #0c101c;
-    color: $white;
-    padding: 100px 20px;
-}
 
 
 // Tablette (max-width: 1024px)
 @media screen and (max-width: 1024px) {
   .video-container {
-    height: 70vh;  // moins haut que full écran
+    height: 100vh;
+
+    video {
+      height: 100%;
+      object-fit: cover; // recouvre toute la zone avec crop
+    }
   }
 
   .scroll-arrow {
-    font-size: 1.6rem;
-    bottom: 15px;
+  font-size: 1.6rem;
+  bottom: 15px;
   }
 
-  #apres-video {
-    padding: 80px 15px;
+  .rotate{
+    width: 70%;
   }
 }
+
+
+
+
+
 
 // Mobile (max-width: 430px)
 @media screen and (max-width: 430px) {
   .video-container {
-    height: 60vh;
+    height: auto;
+
+    video {
+      width: 100%;
+      height: auto;
+      object-fit: contain; // évite le crop
+    }
   }
+
 
   .scroll-arrow {
     font-size: 1.2rem;
     bottom: 10px;
   }
 
-  #apres-video {
-    padding: 60px 10px;
+  .rotate{
+    width: 50%;
   }
 }

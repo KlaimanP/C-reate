@@ -108,7 +108,7 @@
 // Mobile (max-width: 430px)
 @media screen and (max-width: 430px) {
   .service {
-    padding: 60px 10px;
+    padding: 60px 0;
 
     &__container {
       top: 29px;
@@ -126,16 +126,11 @@
 
       &__txt {
         max-width: 300px;
-        padding-left: 10px;
-        border-left-width: 0.5px;
+        padding: 10px;
       }
 
       &__txt h2 {
-        font-size: 1.8rem;
-      }
-
-      &__txt h3 {
-        font-size: 1.4rem;
+        padding-bottom:10px;
       }
 
       &__txt p {
